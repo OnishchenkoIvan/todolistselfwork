@@ -14,12 +14,6 @@ export const AddItemForm = (props: AddItemFormPropsType) => {
     setTitle(e.currentTarget.value);
   };
 
-  // const userMessage = error ? (
-  //   <div style={{ color: "hotpink" }}>Title is required!</div>
-  // ) : (
-  //   <div>Please, create list item title</div>
-  // );
-
   const onKeyDownAddTask = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") addItem();
   };
