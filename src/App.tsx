@@ -14,12 +14,6 @@ import {
   Typography,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
-// CLI
-// GUI => CRUD
-// C+
-// R+++....
-// U++!
-// D+
 
 export type FilterValuesType = "all" | "active" | "completed";
 export type TodoListType = {
@@ -27,7 +21,7 @@ export type TodoListType = {
   title: string;
   filter: FilterValuesType;
 };
-type TasksStateType = {
+export type TasksStateType = {
   [todoListId: string]: Array<TaskType>;
 };
 
