@@ -15,8 +15,10 @@ type ActionsType =
   | AddTodoListAT
   | RemoveTodoListAT;
 
+let initialState: TasksStateType = {};
+
 export const tasksReducer = (
-  state: TasksStateType,
+  state: TasksStateType = initialState,
   action: ActionsType
 ): TasksStateType => {
   switch (action.type) {
@@ -65,11 +67,9 @@ export const tasksReducer = (
         ...rest
       } = { ...state };
       return rest;
-    // let copyState = { ...state };
-    // delete copyState[action.todoListId];
-    // return copyState;
+
     default:
-      throw new Error("I don't understand this type");
+      return state;
   }
 };
 
